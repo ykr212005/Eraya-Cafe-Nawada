@@ -13,7 +13,7 @@ export function MobileMenuDrawer({
   onClose: () => void;
 }) {
   const [query, setQuery] = useState("");
-  const [active, setActive] = useState<MenuCategory>(menuCategories[0]);
+  const [active, setActive] = useState<MenuCategory>(menuCategories[0]!);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
