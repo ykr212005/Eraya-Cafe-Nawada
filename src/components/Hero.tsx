@@ -20,11 +20,11 @@ export function Hero() {
             all served under one roof in {site.locality}.
           </p>
 
-          <div className="mt-9 flex flex-wrap items-center gap-3">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
             <Link
               to="/contact"
               hash="reserve"
-              className="group inline-flex items-center gap-3 bg-primary px-7 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-burgundy"
+              className="group inline-flex items-center justify-center gap-3 bg-primary px-7 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-burgundy"
             >
               Book a Table
               <span
@@ -36,13 +36,13 @@ export function Hero() {
             </Link>
             <Link
               to="/menu"
-              className="inline-flex items-center gap-3 border border-foreground/20 px-7 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-foreground transition-colors hover:border-primary hover:text-primary"
+              className="inline-flex items-center justify-center gap-3 border border-foreground/20 px-7 py-4 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-foreground transition-colors hover:border-primary hover:text-primary"
             >
               Explore Menu
             </Link>
           </div>
 
-          <dl className="mt-11 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-border pt-6 text-sm">
+          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-4 border-t border-border pt-6 text-sm sm:flex sm:flex-wrap sm:items-center sm:gap-x-10">
             <div>
               <dt className="text-[0.62rem] uppercase tracking-[0.24em] text-muted-foreground">
                 Cuisines

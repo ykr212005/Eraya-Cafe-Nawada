@@ -37,13 +37,13 @@ export function BookingBar() {
 
   return (
     <section className="border-y border-border bg-cream">
-      <div className="mx-auto max-w-[1240px] px-5 py-8 sm:px-8 lg:py-10">
+      <div className="mx-auto max-w-[1240px] px-5 py-7 sm:px-8 lg:py-10">
         <form
           onSubmit={submit}
           className="grid gap-5 lg:grid-cols-[auto_1fr_auto] lg:items-end lg:gap-10"
         >
           <div className="lg:max-w-[15rem]">
-            <p className="font-display text-2xl text-foreground">
+            <p className="font-display text-xl text-foreground sm:text-2xl">
               Reserve your table
             </p>
             <p className="mt-1 text-sm text-foreground/65">
@@ -51,8 +51,8 @@ export function BookingBar() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
+            <div className="col-span-2 sm:col-span-1">
               <label className={label} htmlFor="qb-date">
                 Date
               </label>

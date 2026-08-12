@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 
 export function MobileActionBar() {
   return (
-    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/97 backdrop-blur-sm lg:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-background/97 pb-[env(safe-area-inset-bottom)] backdrop-blur-sm lg:hidden">
       <div className="grid grid-cols-3 divide-x divide-border">
         <a
           href={site.phoneHref}

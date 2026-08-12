@@ -15,7 +15,7 @@ export function MenuList({ compact = false }: { compact?: boolean }) {
 
   return (
     <div>
-      <div className="flex flex-wrap gap-2">
+      <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:flex-wrap sm:overflow-visible sm:px-0">
         {(["All", ...menuCategories] as Filter[]).map((c) => (
           <button
             key={c}
@@ -23,7 +23,7 @@ export function MenuList({ compact = false }: { compact?: boolean }) {
             onClick={() => setFilter(c)}
             aria-pressed={filter === c}
             className={cn(
-              "border px-5 py-2.5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] transition-colors",
+              "shrink-0 border px-4 py-2.5 sm:px-5 text-[0.68rem] font-semibold uppercase tracking-[0.18em] transition-colors",
               filter === c
                 ? "border-primary bg-primary text-primary-foreground"
                 : "border-border text-foreground/70 hover:border-primary hover:text-primary",
@@ -34,11 +34,11 @@ export function MenuList({ compact = false }: { compact?: boolean }) {
         ))}
       </div>
 
-      <ul className="mt-12 grid gap-x-16 gap-y-9 md:grid-cols-2">
+      <ul className="mt-8 grid gap-x-16 gap-y-9 sm:mt-12 sm:gap-y-10 md:grid-cols-2">
         {items.map((item, i) => (
           <Reveal as="li" key={item.name} delay={(i % 4) * 70}>
-            <div className="flex items-baseline gap-4">
-              <h3 className="font-display text-xl text-foreground">
+            <div className="flex items-baseline gap-3 sm:gap-4">
+              <h3 className="min-w-0 font-display text-lg text-foreground sm:text-xl">
                 {item.name}
               </h3>
               {item.veg && (
@@ -52,9 +52,9 @@ export function MenuList({ compact = false }: { compact?: boolean }) {
               )}
               <span
                 aria-hidden
-                className="mx-1 h-px flex-1 border-b border-dashed border-border"
+                className="mx-1 hidden h-px flex-1 border-b border-dashed border-border sm:block"
               />
-              <span className="shrink-0 font-display text-lg text-primary">
+              <span className="ml-auto shrink-0 font-display text-base text-primary sm:ml-0 sm:text-lg">
                 {item.price}
               </span>
             </div>
