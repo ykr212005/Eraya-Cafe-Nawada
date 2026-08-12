@@ -52,7 +52,7 @@ export function BookingBar() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
-            <div>
+            <div className="col-span-2 sm:col-span-1">
               <label className={label} htmlFor="qb-date">
                 Date
               </label>
