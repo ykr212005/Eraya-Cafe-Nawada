@@ -169,7 +169,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <Navbar />
-      <main className="pb-16 lg:pb-0">
+      <main>
         {/* Required: nested routes render here. */}
         <Outlet />
       </main>
