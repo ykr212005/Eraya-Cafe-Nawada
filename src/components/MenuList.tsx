@@ -34,7 +34,7 @@ export function MenuList({ compact = false }: { compact?: boolean }) {
         ))}
       </div>
 
-      <ul className="mt-8 grid gap-x-16 gap-y-8 sm:mt-12 sm:gap-y-9 md:grid-cols-2">
+      <ul className="mt-8 grid gap-x-16 gap-y-9 sm:mt-12 sm:gap-y-10 md:grid-cols-2">
         {items.map((item, i) => (
           <Reveal as="li" key={item.name} delay={(i % 4) * 70}>
             <div className="flex items-baseline gap-3 sm:gap-4">
