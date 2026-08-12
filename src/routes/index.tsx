@@ -1,24 +1,58 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { BookingBar } from "@/components/BookingBar";
+import { WhyEraya } from "@/components/WhyEraya";
+import { SignatureDishes } from "@/components/SignatureDishes";
+import { MenuPreview } from "@/components/MenuPreview";
+import { Experience } from "@/components/Experience";
+import { Gallery } from "@/components/Gallery";
+import { Reviews } from "@/components/Reviews";
+import { InstagramStrip } from "@/components/InstagramStrip";
+import { Reservation } from "@/components/Reservation";
+import { LocationSection } from "@/components/LocationSection";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Cafe Eraya — Café in Mohan Garden, New Delhi | Book a Table";
+const description =
+  "Cafe Eraya is a warm, modern café near Dwarka Mor in Mohan Garden, New Delhi. Indo-Chinese, continental, chaat, desserts and coffee. Open daily 11 AM – 10:30 PM. Book a table.";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:url", content: "/" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      {
+        name: "keywords",
+        content:
+          "Cafe Eraya, cafe in Mohan Garden, cafe near Dwarka Mor, best cafe in West Delhi, restaurants near Dwarka Mor, Cafe Eraya New Delhi",
+      },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <h1 className="sr-only">
+        Cafe Eraya — café and restaurant in Mohan Garden, New Delhi
+      </h1>
+      <Hero />
+      <BookingBar />
+      <WhyEraya />
+      <SignatureDishes />
+      <MenuPreview />
+      <Experience />
+      <Gallery />
+      <Reviews />
+      <InstagramStrip />
+      <Reservation />
+      <LocationSection />
+    </>
   );
 }
