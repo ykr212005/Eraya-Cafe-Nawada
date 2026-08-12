@@ -42,7 +42,7 @@ export function Hero() {
             </Link>
           </div>
 
-          <dl className="mt-11 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-border pt-6 text-sm">
+          <dl className="mt-10 grid grid-cols-2 gap-x-8 gap-y-4 border-t border-border pt-6 text-sm sm:flex sm:flex-wrap sm:items-center sm:gap-x-10">
             <div>
               <dt className="text-[0.62rem] uppercase tracking-[0.24em] text-muted-foreground">
                 Cuisines
