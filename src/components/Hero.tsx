@@ -6,10 +6,6 @@ import { site } from "@/lib/site";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-background pt-28 lg:pt-32">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -left-24 top-24 hidden h-[420px] w-[420px] rounded-full bg-cream lg:block"
-      />
       <div className="relative mx-auto grid max-w-[1240px] items-center gap-12 px-5 pb-16 sm:px-8 lg:grid-cols-[1.02fr_1fr] lg:gap-16 lg:pb-24">
         <div className="animate-rise">
           <Eyebrow>Welcome to Cafe Eraya</Eyebrow>
