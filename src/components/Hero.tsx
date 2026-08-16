@@ -16,7 +16,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
         poster=""
       >
-        <source src={heroVideoAsset.url} type="video/mp4" />
+        <source src="/eraya-hero-bg.mp4" type="video/mp4" />
       </video>
 
       {/* Warm dark overlay for readability */}
