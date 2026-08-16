@@ -12,12 +12,11 @@ export const site = {
   addressFull:
     "Shop No. 3, 80A, K-1 Extension, Shani Bazar Chowk, Gurudwara Road, Block M, Mohan Garden, Hastsal, New Delhi – 110059",
   landmark: "Near Zaildar Sports Complex, Dwarka Mor area",
-  // TODO: replace with the café's real contact number
-  phoneDisplay: "+91 99999 99999",
-  phoneHref: "tel:+919999999999",
-  whatsappHref: "https://wa.me/919999999999",
-  instagram: "@cafeeraya",
-  instagramHref: "https://instagram.com/cafeeraya",
+  phoneDisplay: "+91 78924 08836",
+  phoneHref: "tel:+917892408836",
+  whatsappHref: "https://wa.me/917892408836",
+  instagram: "@cafe_eraya",
+  instagramHref: "https://www.instagram.com/cafe_eraya?igsh=MXM1NHNkMzVsZmg0bg==",
   facebookHref: "https://facebook.com/cafeeraya",
   hours: "11:00 AM — 10:30 PM",
   hoursNote: "Every day",
