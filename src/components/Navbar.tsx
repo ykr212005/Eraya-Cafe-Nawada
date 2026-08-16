@@ -41,7 +41,12 @@ export function Navbar() {
           <span className="font-display text-[1.55rem] leading-none tracking-[0.16em] text-primary">
             ERAYA
           </span>
-          <span className="hidden text-[0.6rem] uppercase tracking-[0.3em] text-muted-foreground sm:inline">
+          <span
+            className={cn(
+              "hidden text-[0.6rem] uppercase tracking-[0.3em] sm:inline",
+              solid ? "text-muted-foreground" : "text-background/70",
+            )}
+          >
             Café · Delhi
           </span>
         </Link>
@@ -52,14 +57,20 @@ export function Navbar() {
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              className="relative py-1 text-[0.78rem] font-medium uppercase tracking-[0.18em] text-foreground/75 transition-colors hover:text-primary data-[status=active]:text-primary"
+              className={cn(
+                "relative py-1 text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-primary data-[status=active]:text-primary",
+                solid ? "text-foreground/75" : "text-background/85",
+              )}
             >
               {l.label}
             </Link>
           ))}
           <a
             href={site.phoneHref}
-            className="flex items-center gap-2 text-[0.78rem] font-medium uppercase tracking-[0.18em] text-foreground/75 transition-colors hover:text-primary"
+            className={cn(
+              "flex items-center gap-2 text-[0.78rem] font-medium uppercase tracking-[0.18em] transition-colors hover:text-primary",
+              solid ? "text-foreground/75" : "text-background/85",
+            )}
           >
             <Phone className="h-3.5 w-3.5" strokeWidth={1.6} />
             Call
@@ -67,7 +78,7 @@ export function Navbar() {
           <Link
             to="/contact"
             hash="reserve"
-            className="border border-primary bg-primary px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:bg-burgundy hover:border-burgundy"
+            className="border border-primary bg-primary px-5 py-3 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-colors hover:border-burgundy hover:bg-burgundy"
           >
             Book a Table
           </Link>
@@ -78,7 +89,12 @@ export function Navbar() {
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
-          className="shrink-0 border border-border p-2.5 text-foreground transition-colors hover:border-primary hover:text-primary lg:hidden"
+          className={cn(
+            "shrink-0 border p-2.5 transition-colors hover:border-primary hover:text-primary lg:hidden",
+            solid
+              ? "border-border text-foreground"
+              : "border-background/30 text-background",
+          )}
         >
           {open ? (
             <X className="h-5 w-5" strokeWidth={1.5} />
