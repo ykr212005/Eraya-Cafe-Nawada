@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100dvh] items-center overflow-hidden">
+    <section className="relative flex min-h-[100dvh] items-center overflow-hidden bg-foreground">
       {/* Background video */}
       <video
         autoPlay
