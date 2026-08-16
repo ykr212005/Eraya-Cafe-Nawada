@@ -1,5 +1,4 @@
 import { Link } from "@tanstack/react-router";
-import heroVideoAsset from "@/assets/eraya-hero-bg.mp4.asset.json";
 import { Eyebrow } from "@/components/Eyebrow";
 import { site } from "@/lib/site";
 
