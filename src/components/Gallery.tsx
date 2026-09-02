@@ -50,7 +50,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid auto-rows-[190px] grid-cols-1 gap-4 sm:auto-rows-[220px] sm:grid-cols-3">
+        <div className="mt-14 grid auto-rows-[190px] grid-flow-row-dense grid-cols-1 gap-4 sm:auto-rows-[220px] sm:grid-cols-3">
           {items.map((s, i) => (
             <Reveal
               key={s.caption}
