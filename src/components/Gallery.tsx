@@ -10,19 +10,33 @@ import { Eyebrow } from "@/components/Eyebrow";
 import { Reveal } from "@/components/Reveal";
 import { cn } from "@/lib/utils";
 
+/*
+ * Layout tiles perfectly in a 3-column grid (no gaps):
+ * row 1-2: [ interior 2x2 ][ g1 ] / [ g2 ]
+ * row 3:   [ g3 ][ g4 2-wide ]
+ * row 4-5: [ g6 2x2 ][ chaat ] / [ g5 ]   (only when `full`)
+ */
 const shots = [
-  { src: g1, caption: "Every cup, poured to order", span: "sm:row-span-2" },
+  {
+    src: interior,
+    caption: "Afternoon light indoors",
+    span: "sm:col-span-2 sm:row-span-2",
+  },
+  { src: g1, caption: "Every cup, poured to order", span: "" },
   { src: g2, caption: "Tables made for sharing", span: "" },
   { src: g3, caption: "Details on the table", span: "" },
-  { src: g4, caption: "The dessert counter", span: "" },
-  { src: interior, caption: "Afternoon light indoors", span: "sm:col-span-2" },
-  { src: g6, caption: "Our corner seat", span: "sm:row-span-2" },
+  { src: g4, caption: "The dessert counter", span: "sm:col-span-2" },
+  {
+    src: g6,
+    caption: "Our corner seat",
+    span: "sm:col-span-2 sm:row-span-2",
+  },
   { src: chaat, caption: "Chaat, plated properly", span: "" },
-  { src: g5, caption: "Find us on Gurudwara Road", span: "sm:col-span-2" },
+  { src: g5, caption: "Find us on Gurudwara Road", span: "" },
 ];
 
 export function Gallery({ full = false }: { full?: boolean }) {
-  const items = full ? shots : shots.slice(0, 6);
+  const items = full ? shots : shots.slice(0, 5);
 
   return (
     <section className="bg-cream py-20 lg:py-28">
